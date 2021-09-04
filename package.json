@@ -1,0 +1,17 @@
+{
+  "name": "paystack-practice",
+  "version": "1.0.0",
+  "description": "A Simple Project to Feel out or Practice Paystack Integration",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lone Wolf",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.4",
+    "pug": "^3.0.2",
+    "request": "^2.88.2"
+  }
+}
