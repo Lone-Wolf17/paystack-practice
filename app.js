@@ -1,13 +1,10 @@
 const express = require('express');
-const request = require('request');
 const pug = require('pug');
-const _ = require('lodash');
 const path = require('path');
 const connectDB = require("./config/db.js");
 const morgan = require('morgan');
 require('dotenv').config();
-const Donor = require('./models/Donor.js');
-const {initializePayment, verifyPayment} = require('./config/paystack')(request);
+const indexRouter = require('./routes/index.js');
 
 const app = express();
 
@@ -25,12 +22,13 @@ app.set('view engine', pug);
 connectDB();
 
 
-// Routers
+// Routes
+app.use('/', indexRouter);
 
 
 const port =  process.env.PORT || 3000
 
-app.listen(process.env.PORT, () => {
+app.listen(port, () => {
     console.log(`Server is running on port ${3000}`);
   });
   
