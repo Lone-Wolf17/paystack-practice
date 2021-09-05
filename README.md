@@ -7,3 +7,4 @@ Variables Expected are:
 * MONGO_URL (Secret)
 * API_BASE_URL = /api/v1
 * PORT = 3000
+* PAYSTACK_SK_TEST (Secret)
